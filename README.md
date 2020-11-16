@@ -9,7 +9,7 @@
 > #### Connect to MongoDB using CLI 
 > - ***mongo***
 >
-> - #### Help command 
+> #### Help command 
 > - ***help***
 >
 > #### Show databases 
@@ -25,6 +25,6 @@
 2.  Dentro de esta se creó ortra collección llamada **services**.
 3.  Se posiciona en collección **services**
  
-    ![MondoDBCompass, Using console](images\created_switched.jpg)
+    ![MondoDBCompass, Using console](images/created_switched.jpg)
  
 
