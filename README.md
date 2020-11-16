@@ -4,19 +4,19 @@
 ### COMANDOS
 
 > #### Start MongoDB 
-> - **mongod**
+> - ***mongod***
 >
 > #### Connect to MongoDB using CLI 
-> - **mongo**
+> - ***mongo***
 >
 > - #### Help command 
-> - **help**
+> - ***help***
 >
-> ####Show databases 
->  - **show dbs**
+> #### Show databases 
+>  - ***show dbs***
 >
 > #### Connect or create a database 
-> - **use <dbname>**
+> - ***use <dbname>***
 >
 > #### Create new collection 
-> - **db.createCollection(“countries”)**
+> - ***db.createCollection(“countries”)***
