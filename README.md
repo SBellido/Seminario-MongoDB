@@ -1,21 +1,21 @@
 ## Seminario MongoDB - TUDAI - FCE - UNICEN / 2020
 
 ### Actividad 1
-> **1.** Instalar MongoDB en ambiente local.
+**1.** Instalar MongoDB en ambiente local.
 
-> **2.** Conectarse a MongoDB vía CLI.
+**2.** Conectarse a MongoDB vía CLI.
 
-> **3.** Crear una nueva base de datos llamada futbolfifa.
+**3.** Crear una nueva base de datos llamada futbolfifa.
 
-> **4.** Crear una nueva collection llamada players.
+**4.** Crear una nueva collection llamada players.
 
-> **5.** Insertar 5 documentos en la collection players con datos básicos (nombre, apellido, posición, fecha de nacimiento, etc).
+**5.** Insertar 5 documentos en la collection players con datos básicos (nombre, apellido, posición, fecha de nacimiento, etc).
 
-> **6.** Listar todos los documentos de la collection players.
+**6.** Listar todos los documentos de la collection players.
 
-> **7.** Crear otras collections con documentos (ej. teams, games, etc).
+**7.** Crear otras collections con documentos (ej. teams, games, etc).
 
-> Importante: Guardar cada comando y subirlo a un repo/gist en GitHub.
+Importante: Guardar cada comando y subirlo a un repo/gist en GitHub.
 
 ### COMANDOS
 
