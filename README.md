@@ -38,11 +38,11 @@
 > - ***db.createCollection(“countries”)***
 
 
-**1.**  Se creó la db para la empresa **grafeno**.
+**1.**  Se creó la db para la empresa ***grafeno***.
 
-**2.**  Dentro de esta se crearon las colecciones **service**, **clients** y **client**.
+**2.**  Dentro de esta se crearon las colecciones ***service***, ***clients*** y ***client***.
 
-**3.**  Se posiciona en collección **service**
+**3.**  Se posiciona en collección ***service***
 
  ![MondoDBCompass, Using console](images/created_switched.jpg)
 
