@@ -120,16 +120,24 @@ que hayan salido los últimos 2 años.
 
 > ***db.createCollection("movies")***
 > - Crea una nueva colección llamada ***movies***.
-
+>
 > ***db.movies.insert(***
-***{ title: 'Titanic',*** 
-    ***year: 1998,*** 
-    ***rating: 4.7, ***
-    ***genre: 'Romance',*** 
-    ***des195cription: 'Una joven de la alta sociedad abandona a su arrogante pretendiente por un artista humilde en el trasatlántico que se hundió durante su viaje inaugural.',*** 
-    ***country: 'EEUU',*** 
-    ***income:  2.,***
-    ***duration: 240 } )***
+>
+> ***{ title: 'Titanic',*** 
+>    
+> ***year: 1998,*** 
+>    
+> ***rating: 4.7, ***
+>   
+> ***genre: 'Romance',*** 
+>    
+> ***des195cription: 'Una joven de la alta sociedad abandona a su arrogante pretendiente por un artista humilde en el trasatlántico que se hundió durante su viaje inaugural.',*** 
+>    
+> ***country: 'EEUU',*** 
+>   
+> ***income:  2.,***
+>
+> ***duration: 240 } )***
 > - Crea un documento en la colección ***movies***
 
 > ***db.movies.update({title: 'Titanic'}, {$push: {actors: {$each:['Leonardo Dicaprio', 'Kate Winslet', 'Billy Zane']}}})***
