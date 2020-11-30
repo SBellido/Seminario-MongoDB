@@ -1,6 +1,6 @@
 ## Seminario MongoDB - TUDAI - FCE - UNICEN / 2020
 
-### Actividad 1 ***enunciado***
+### Actividad 1
 > **1.** Instalar MongoDB en ambiente local.
 
 > **2.** Conectarse a MongoDB vía CLI.
