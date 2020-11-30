@@ -133,6 +133,9 @@ que hayan salido los últimos 2 años.
 > ***db.movies.insertMany( [ { title: 'Batman inicia' }, { title: 'Martes 13' }, { title: 'El Gran Pez' } ] )***
 > - Crean varios documentos en la colección ***movies***
 
+![MondoDBCompass, Using console](images/resultMany.jpg)
+
+
 
 
 
