@@ -44,17 +44,17 @@ Importante: Guardar cada comando y subirlo a un repo/gist en GitHub.
 
 **3.**  Se posiciona en collección ***service***
 
- ![MondoDBCompass, Using console](images/created_switched.jpg)
+![MondoDBCompass, Using console](images/created_switched.jpg)
 
 **4.**  Se inserta un documento con el siguiente comando: 
 
 ***db.clients.insert({brand: 'InvestigAr', nameClient: 'Fabricio Ballarini', city: 'CABA', numberMobile: '005491121580848', fechaEntrega: 'ISODate("2021-03-06")'})***
 
- ![MondoDBCompass, Using console](images/result-insert-date.jpg)
+![MondoDBCompass, Using console](images/result-insert-date.jpg)
 
 **5.**  Después de cargar más documentos sin campo fechaEntrega se usó este comando para agregar dicho campo al resto de los documentos.  
 
- ***db.clients.insert({brand: 'InvestigAr', nameClient: 'Fabricio Ballarini', city: 'CABA', numberMobile: '005491121580848', fechaEntrega: 'ISODate("2021-03-06")'})***
+***db.clients.insert({brand: 'InvestigAr', nameClient: 'Fabricio Ballarini', city: 'CABA', numberMobile: '005491121580848', fechaEntrega: 'ISODate("2021-03-06")'})***
 
 ![MondoDBCompass, Using console](images/dbFind.jpg)
 
@@ -62,15 +62,15 @@ Importante: Guardar cada comando y subirlo a un repo/gist en GitHub.
 
 ***db.clients.updateMany( {}, { $rename: { "fechaEntrega": "dateDelivery" } } )***
 
- ![MondoDBCompass, Using console](images/setDate.jpg)
+![MondoDBCompass, Using console](images/setDate.jpg)
 
 **7.**  Se muestran todas las colecciones de la db ***grafeno*** con el siguiente comando:
 
- ![MondoDBCompass, Using console](images/showCollection.jpg)
+![MondoDBCompass, Using console](images/showCollection.jpg)
 
- **8.**  Se eliminó la colección ***client*** con el siguiente comando:
+**8.**  Se eliminó la colección ***client*** con el siguiente comando:
 
- ![MondoDBCompass, Using console](images/dropCollection.jpg)
+![MondoDBCompass, Using console](images/dropCollection.jpg)
 
 **9.**  Se editó el nombre de la colección ***service*** por 
 
@@ -78,7 +78,7 @@ Importante: Guardar cada comando y subirlo a un repo/gist en GitHub.
 
 ***db.service.renameCollection('services')***
 
- ![MondoDBCompass, Using console](images/setNameCollection.jpg)
+![MondoDBCompass, Using console](images/setNameCollection.jpg)
 
 ### Actividad 2
 
@@ -96,7 +96,6 @@ Importante: Guardar cada comando y subirlo a un repo/gist en GitHub.
 con rating > 4.5.
 
 Importante: Guardar cada comando y subirlo a un repo/gist en GitHub.
-Actividad #2
 
 **5.** Actualizar películas cambiando el genre “drama” por “bored”.
 
@@ -106,6 +105,33 @@ Actividad #2
 
 **8.** Buscar todas las películas de acción con un buen rating (ej. > 4.0)
 que hayan salido los últimos 2 años.
+
+
+### COMANDOS
+
+> ***use stv*** 
+> - Crea una nueva base de datos llamada ***stv*** (Streaming Video).
+
+> ***db.createCollection("netflix")***
+> - Crea una nueva colección llamada ***netflix***.
+
+> ***use netflix***
+> - Se posiciona sobre la colección llamada ***netflix***
+
+> ***db.createCollection("movies")***
+> - Crea una nueva colección llamada ***movies***.
+
+> ***db.movies.insert({title: 'Titanic', year: 1998, rating: 4.7, genre: 'Romance', des195cription: 'Una joven de la alta sociedad abandona a su arrogante pretendiente por un artista humilde en el trasatlántico que se hundió durante su viaje inaugural.', country: 'EEUU', income:  2., duration: 240})***
+> - Crea un documento en la colección ***movies***
+
+> ***db.movies.update({title: 'Titanic'}, {$push: {actors: {$each:['Leonardo Dicaprio', 'Kate Winslet', 'Billy Zane']}}})***
+> - Inserta un arreglo en la película con ***title*** 'Titanic'.
+
+> ***db.movies.insertOne({title: 'Guasón', year: 2019, rating: 4.5, genre: 'Crimen', description: 'Arthur Fleck adora hacer reír a la gente, pero su carrera como comediante es un fracaso. El repudio social, la marginación y una serie de trágicos acontecimientos lo conducen por el sendero de la locura y, finalmente, cae en el mundo del crimen.', country: 'EEUU', income:  1.074, duration: 140})***
+> - Crea un documento en la colección ***movies***
+
+
+
 
 
 
