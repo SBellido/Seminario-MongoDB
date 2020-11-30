@@ -131,9 +131,14 @@ que hayan salido los últimos 2 años.
 > - Crea un documento en la colección ***movies***
 
 > ***db.movies.insertMany( [ { title: 'Batman inicia' }, { title: 'Martes 13' }, { title: 'El Gran Pez' } ] )***
-> - Crean varios documentos en la colección ***movies***
+> - Crea varios documentos en la colección ***movies*** y les agrega el campo ***title***.
 
 ![MondoDBCompass, Using console](images/resultMany.jpg)
+
+> ***db.movies.find( { rating: { $gt: 4.5 } } )***
+> - Encuentra los documentos donde el campo ***rating*** es mayor a 4.5
+
+
 
 
 
