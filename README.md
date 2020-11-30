@@ -95,8 +95,6 @@ Importante: Guardar cada comando y subirlo a un repo/gist en GitHub.
 **4.** Actualizar películas agregando el field highlighted=true a aquellas
 con rating > 4.5.
 
-Importante: Guardar cada comando y subirlo a un repo/gist en GitHub.
-
 **5.** Actualizar películas cambiando el genre “drama” por “bored”.
 
 **6.** Borrar todas las películas que tengan más de 30 años.
@@ -106,6 +104,7 @@ Importante: Guardar cada comando y subirlo a un repo/gist en GitHub.
 **8.** Buscar todas las películas de acción con un buen rating (ej. > 4.0)
 que hayan salido los últimos 2 años.
 
+Importante: Guardar cada comando y subirlo a un repo/gist en GitHub.
 
 ### COMANDOS
 
@@ -136,10 +135,25 @@ que hayan salido los últimos 2 años.
 ![MondoDBCompass, Using console](images/resultMany.jpg)
 
 > ***db.movies.find( { rating: { $gt: 4.5 } } )***
-> - Encuentra los documentos donde el campo ***rating*** es mayor a 4.5
+> - Encuentra los documentos donde el campo ***rating*** es mayor a 4.5 ($gt: greater than (>))
 
+> ***db.movies.find( { rating: { $lt: 4.6 } } )***
+> - Encuentra los documentos donde el campo ***rating*** es menor a 4.6 ($gt: lower than (<))
 
+> ***db.movies.updateMany( { rating: { $gt: 4.5 } },{ $set: { highlighted: true } } )***
+> - Agrega el campo ***highlighted*** con valor ***true*** a todos los documentos donde el campo ***rating*** es mayor a 4.5 ($gt: greater than (>)).
 
+> ***db.movies.updateMany( { genre: "Drama" }, { $set: { genre: "Bored" } } )***
+> - Actualiza campos ***genre*** de todas las películas de género ***Drama*** cambiándolo a ***Bored***.
+
+> ***db.movies.deleteMany( { year: { $lt: new Date().getFullYear() - 30 } } )***
+> - Elimina todas las películas que tengan más de 30 años.
+
+> ***db.movies.find( { country: "Argentina" } )***
+> - Encuentra todos los documentos donde el campo ***country*** es ***'Argentina'***.
+
+> ***db.movies.find( { genre: "Action", rating: { $gt: 4.0 }, year: { $gt: new Date().getFullYear() - 2 } } )***
+> - Encuentra todos los documentos donde el campo ***rating*** es mayor a 4.0 y tengan como máximo 2 años.
 
 
 
