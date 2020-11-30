@@ -127,8 +127,12 @@ que hayan salido los últimos 2 años.
 > ***db.movies.update({title: 'Titanic'}, {$push: {actors: {$each:['Leonardo Dicaprio', 'Kate Winslet', 'Billy Zane']}}})***
 > - Inserta un arreglo en la película con ***title*** 'Titanic'.
 
-> ***db.movies.insertOne({title: 'Guasón', year: 2019, rating: 4.5, genre: 'Crimen', description: 'Arthur Fleck adora hacer reír a la gente, pero su carrera como comediante es un fracaso. El repudio social, la marginación y una serie de trágicos acontecimientos lo conducen por el sendero de la locura y, finalmente, cae en el mundo del crimen.', country: 'EEUU', income:  1.074, duration: 140})***
+> ***db.movies.insertOne( { title: 'Guasón', year: 2019, rating: 4.5, genre: 'Crimen', description: 'Arthur Fleck adora hacer reír a la gente, pero su carrera como comediante es un fracaso. El repudio social, la marginación y una serie de trágicos acontecimientos lo conducen por el sendero de la locura y, finalmente, cae en el mundo del crimen.', country: 'EEUU', income:  1.074, duration: 140 } )***
 > - Crea un documento en la colección ***movies***
+
+> ***db.movies.insertMany( [ { title: 'Batman inicia' }, { title: 'Martes 13' }, { title: 'El Gran Pez' } ] )***
+> - Crean varios documentos en la colección ***movies***
+
 
 
 
