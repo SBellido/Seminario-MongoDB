@@ -38,17 +38,17 @@ Importante: Guardar cada comando y subirlo a un repo/gist en GitHub.
 > - ***db.createCollection(“countries”)***
 
 
-**1.**  Se creó la db para la empresa ***grafeno***.
-
-**2.**  Dentro de esta se crearon las colecciones ***service***, ***clients*** y ***client***.
-
-**3.**  Se posiciona en collección ***service***
-
-![MondoDBCompass, Using console](images/created_switched.jpg)
-
-**4.**  Se inserta un documento con el siguiente comando: 
-
-***db.clients.insert({brand: 'InvestigAr', nameClient: 'Fabricio Ballarini', city: 'CABA', numberMobile: '005491121580848', fechaEntrega: 'ISODate("2021-03-06")'})***
+> **1.**  Se creó la db para la empresa ***grafeno***.
+> 
+> **2.**  Dentro de esta se crearon las colecciones ***service***, ***clients*** y ***client***.
+>
+> **3.**  Se posiciona en collección ***service***
+>
+> ![MondoDBCompass, Using console](images/created_switched.jpg)
+>
+> **4.**  Se inserta un documento con el siguiente comando: 
+>
+> - ***db.clients.insert({brand: 'InvestigAr', nameClient: 'Fabricio Ballarini', city: 'CABA', numberMobile: '005491121580848', fechaEntrega: 'ISODate("2021-03-06")'})***
 
 ![MondoDBCompass, Using console](images/result-insert-date.jpg)
 
@@ -58,27 +58,25 @@ Importante: Guardar cada comando y subirlo a un repo/gist en GitHub.
 
 ![MondoDBCompass, Using console](images/dbFind.jpg)
 
-**6.**  Se editó el nombre del campo ***fechaEntrega*** por ***dateDelivery***.
+> **6.**  Se editó el nombre del campo ***fechaEntrega*** por ***dateDelivery***.
+>
+> - ***db.clients.updateMany( {}, { $rename: { "fechaEntrega": "dateDelivery" } } )***
+>
+> ![MondoDBCompass, Using console](images/setDate.jpg)
 
-***db.clients.updateMany( {}, { $rename: { "fechaEntrega": "dateDelivery" } } )***
+> **7.**  Se muestran todas las colecciones de la db ***grafeno*** con el siguiente comando:
+>
+> ![MondoDBCompass, Using console](images/showCollection.jpg)
 
-![MondoDBCompass, Using console](images/setDate.jpg)
+> **8.**  Se eliminó la colección ***client*** con el siguiente comando:
+>
+> ![MondoDBCompass, Using console](images/dropCollection.jpg)
 
-**7.**  Se muestran todas las colecciones de la db ***grafeno*** con el siguiente comando:
-
-![MondoDBCompass, Using console](images/showCollection.jpg)
-
-**8.**  Se eliminó la colección ***client*** con el siguiente comando:
-
-![MondoDBCompass, Using console](images/dropCollection.jpg)
-
-**9.**  Se editó el nombre de la colección ***service*** por 
-
-***services*** para mantener consistencia y todas las colecciones sean en plural.
-
-***db.service.renameCollection('services')***
-
-![MondoDBCompass, Using console](images/setNameCollection.jpg)
+> **9.**  Se editó el nombre de la colección ***service*** por ***services*** para mantener consistencia y todas las colecciones sean en plural.
+>
+> - ***db.service.renameCollection('services')***
+>
+> ![MondoDBCompass, Using console](images/setNameCollection.jpg)
 
 ### Actividad 2
 
@@ -108,52 +106,52 @@ Importante: Guardar cada comando y subirlo a un repo/gist en GitHub.
 
 ### COMANDOS
 
-> ***use stv*** 
-> - Crea una nueva base de datos llamada ***stv*** (Streaming Video).
+> Crea una nueva base de datos llamada ***stv*** (Streaming Video).
+> - ***use stv*** 
 
-> ***db.createCollection("netflix")***
-> - Crea una nueva colección llamada ***netflix***.
+> Crea una nueva colección llamada ***netflix***.
+> - ***db.createCollection("netflix")***
 
-> ***use netflix***
-> - Se posiciona sobre la colección llamada ***netflix***
+> Se posiciona sobre la colección llamada ***netflix***
+> - ***use netflix***
 
-> ***db.createCollection("movies")***
-> - Crea una nueva colección llamada ***movies***.
+> Crea una nueva colección llamada ***movies***.
+> - ***db.createCollection("movies")***
 
 > ***db.movies.insert( { title: 'Titanic', year: 1998, rating: 4.7, genre: 'Romance', des195cription: 'Una joven de la alta sociedad abandona a su arrogante pretendiente por un artista humilde en el trasatlántico que se hundió durante su viaje inaugural.', country: 'EEUU', ncome:  2., duration: 240 } )***
 > - Crea un documento en la colección ***movies***
 
-> ***db.movies.update({title: 'Titanic'}, {$push: {actors: {$each:['Leonardo Dicaprio', 'Kate Winslet', 'Billy Zane']}}})***
-> - Inserta un arreglo en la película con ***title*** 'Titanic'.
+> Inserta un arreglo en la película con ***title*** 'Titanic'.
+> - ***db.movies.update({title: 'Titanic'}, {$push: {actors: {$each:['Leonardo Dicaprio', 'Kate Winslet', 'Billy Zane']}}})***
 
-> ***db.movies.insertOne( { title: 'Guasón', year: 2019, rating: 4.5, genre: 'Crimen', description: 'Arthur Fleck adora hacer reír a la gente, pero su carrera como comediante es un fracaso. El repudio social, la marginación y una serie de trágicos acontecimientos lo conducen por el sendero de la locura y, finalmente, cae en el mundo del crimen.', country: 'EEUU', income:  1.074, duration: 140 } )***
-> - Crea un documento en la colección ***movies***
+> Crea un documento en la colección ***movies***
+> - ***db.movies.insertOne( { title: 'Guasón', year: 2019, rating: 4.5, genre: 'Crimen', description: 'Arthur Fleck adora hacer reír a la gente, pero su carrera como comediante es un fracaso. El repudio social, la marginación y una serie de trágicos acontecimientos lo conducen por el sendero de la locura y, finalmente, cae en el mundo del crimen.', country: 'EEUU', income:  1.074, duration: 140 } )***
 
 > ***db.movies.insertMany( [ { title: 'Batman inicia' }, { title: 'Martes 13' }, { title: 'El Gran Pez' } ] )***
 > - Crea varios documentos en la colección ***movies*** y les agrega el campo ***title***.
 
 ![MondoDBCompass, Using console](images/resultMany.jpg)
 
-> ***db.movies.find( { rating: { $gt: 4.5 } } )***
-> - Encuentra los documentos donde el campo ***rating*** es mayor a 4.5 ($gt: greater than (>))
+> Encuentra los documentos donde el campo ***rating*** es mayor a 4.5 ($gt: greater than (>))
+> - ***db.movies.find( { rating: { $gt: 4.5 } } )***
 
-> ***db.movies.find( { rating: { $lt: 4.6 } } )***
-> - Encuentra los documentos donde el campo ***rating*** es menor a 4.6 ($gt: lower than (<))
+> Encuentra los documentos donde el campo ***rating*** es menor a 4.6 ($gt: lower than (<))
+> - ***db.movies.find( { rating: { $lt: 4.6 } } )***
 
-> ***db.movies.updateMany( { rating: { $gt: 4.5 } },{ $set: { highlighted: true } } )***
-> - Agrega el campo ***highlighted*** con valor ***true*** a todos los documentos donde el campo ***rating*** es mayor a 4.5 ($gt: greater than (>)).
+> Agrega el campo ***highlighted*** con valor ***true*** a todos los documentos donde el campo ***rating*** es mayor a 4.5 ($gt: greater than (>)).
+> - ***db.movies.updateMany( { rating: { $gt: 4.5 } },{ $set: { highlighted: true } } )***
 
-> ***db.movies.updateMany( { genre: "Drama" }, { $set: { genre: "Bored" } } )***
-> - Actualiza campos ***genre*** de todas las películas de género ***Drama*** cambiándolo a ***Bored***.
+> Actualiza campos ***genre*** de todas las películas de género ***Drama*** cambiándolo a ***Bored***.
+> - ***db.movies.updateMany( { genre: "Drama" }, { $set: { genre: "Bored" } } )***
 
-> ***db.movies.deleteMany( { year: { $lt: new Date().getFullYear() - 30 } } )***
-> - Elimina todas las películas que tengan más de 30 años.
+> Elimina todas las películas que tengan más de 30 años.
+> - ***db.movies.deleteMany( { year: { $lt: new Date().getFullYear() - 30 } } )***
 
-> ***db.movies.find( { country: "Argentina" } )***
-> - Encuentra todos los documentos donde el campo ***country*** es ***'Argentina'***.
+> Encuentra todos los documentos donde el campo ***country*** es ***'Argentina'***.
+> - ***db.movies.find( { country: "Argentina" } )***
 
-> ***db.movies.find( { genre: "Action", rating: { $gt: 4.0 }, year: { $gt: new Date().getFullYear() - 2 } } )***
-> - Encuentra todos los documentos donde el campo ***rating*** es mayor a 4.0 y tengan como máximo 2 años.
+> Encuentra todos los documentos donde el campo ***rating*** es mayor a 4.0 y tengan como máximo 2 años.
+> - ***db.movies.find( { genre: "Action", rating: { $gt: 4.0 }, year: { $gt: new Date().getFullYear() - 2 } } )***
 
 ### Actividad 3
 
