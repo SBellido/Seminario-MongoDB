@@ -175,7 +175,7 @@ Utilizar la misma base de datos de películas e insertar varias películas con d
 > - ***db.movies.find().limit(5).sort( { income: -1 } )***
 
 > **5.** Listar el 2do conjunto de 5 películas más taquilleras.
-
+>
 > ***db.movies.find().skip(5).limit(5).sort( { income: -1 } )***
 
 > **6.** Repetir query 3 y 4 pero retornando sólo el título y genre.
