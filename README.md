@@ -201,6 +201,16 @@ Utilizar la misma base de datos de películas e insertar varias películas con d
 >
 > Configura el marco de servidor estándar para Node.js, instalación de dependencias ***express*** y ***nodemon*** en package.json.
 
+> - ***npm install mongoose***
+>
+> Instala MongoDB
+
+> Se generó el siguiente endpoint
+>
+> - mongodb+srv://consultorio:<prueba123>@cluster0.7bjev.mongodb.net/<dbname>?retryWrites=true&w=majority
+
+> - ***npm install dotenv***
+> - 
 
 
 
