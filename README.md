@@ -205,12 +205,17 @@ Utilizar la misma base de datos de películas e insertar varias películas con d
 >
 > Instala MongoDB
 
-> Se generó el siguiente endpoint
+> Se generó el siguiente endpoint para la DB ***grafeno***.
 >
-> - mongodb+srv://consultorio:<prueba123>@cluster0.7bjev.mongodb.net/<dbname>?retryWrites=true&w=majority
+> - mongodb+srv://consultorio:prueba123@cluster0.7bjev.mongodb.net/grafeno?retryWrites=true&w=majority
 
 > - ***npm install dotenv***
-> - 
+>
+> Instala dependencia ***dotenv***
+
+> - ***npm install body-parser***
+>
+> Instala la dependencia que parsea el cuerpo del JSON enviado a la DB.
 
 
 

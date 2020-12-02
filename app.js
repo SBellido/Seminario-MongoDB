@@ -1,25 +1,30 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose'); 
+const bodyParser = require('body-parser'); 
+require('dotenv/config');
 
-// MiddLewares
-// app.use(auth);
-// app.use('/posts', () => {
-//     console.log('Esto es un MiddLewares');
-// });
+app.use(bodyParser.json());
+
+// Import Routes
+const postsRoute = require('./routes/posts');
+
+app.use('/posts', postsRoute);
 
 // ROUTES 
 app.get('/', (req, res) => {
     res.send('Hola mundo');
-})
+});
 
-// app.get('/posts', (req, res) => {
-//     res.send('Hola posts');
-// })
+app.get('/posts', (req, res) => {
+    res.send('Hola posts');
+});
 
 // Connect To DB
-mongoose.connect('mongodb+srv://seba:prueba123@cluster0.7bjev.mongodb.net/grafeno?retryWrites=true&w=majority', () =>
-    console.log('conectado a la DB!')
+mongoose.connect(
+    process.env.DB_CONNECTION, 
+    { useNewUrlParser: true, useUnifiedTopology: true },
+    () => console.log("Nombre de la DB:", mongoose.connection.db.databaseName)
 );
 // COMO COMENZAR A ESCUCHAR AL SERVIDOR
 app.listen(3000);
