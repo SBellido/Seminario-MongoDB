@@ -217,6 +217,11 @@ Utilizar la misma base de datos de películas e insertar varias películas con d
 >
 > Instala la dependencia que parsea el cuerpo del JSON enviado a la DB.
 
+> - ***npm install cors***
+>
+> Instala la dependencia CORS. 
+> CORS significa Cross-Origin Resource Sharing, y es una política a nivel de navegador web que se aplica para prevenir que el dominio A evite acceder a recursos del dominio B usando solicitudes del tipo AJAX como cuando usamos fetch() o XMLHttpRequest.
+
 
 
 
