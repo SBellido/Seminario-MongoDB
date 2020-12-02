@@ -192,7 +192,7 @@ Utilizar la misma base de datos de películas e insertar varias películas con d
 
 ## Build a Restful Api with Node.js, Express & MongoDB
 
-## COMANDOS INICIALES
+## COMANDOS
 > - ***npm init***
 >
 > Genera archivo package.json.
@@ -207,7 +207,7 @@ Utilizar la misma base de datos de películas e insertar varias películas con d
 
 > Se generó el siguiente endpoint para la DB ***grafeno***.
 >
-> - mongodb+srv://consultorio:prueba123@cluster0.7bjev.mongodb.net/grafeno?retryWrites=true&w=majority
+> - mongodb+srv://seba:prueba123@cluster0.7bjev.mongodb.net/grafeno?retryWrites=true&w=majority
 
 > - ***npm install dotenv***
 >
