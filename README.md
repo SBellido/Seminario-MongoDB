@@ -188,6 +188,24 @@ Utilizar la misma base de datos de películas e insertar varias películas con d
 >
 > - ***db.movies.distinct("country")***
 
+> ### Actividad 4 - 
+>
+> ## Build a Restful Api with Node.js, Express & MongoDB
+
+## COMANDOS INICIALES
+> - ***npm init***
+>
+> Genera archivo package.json.
+
+> - ***npm install express nodemon***
+>
+> Configura el marco de servidor estándar para Node.js, instalación de dependencias ***express*** y ***nodemon*** en package.json.
+
+
+
+
+
+
 
 
 
